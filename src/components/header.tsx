@@ -77,7 +77,7 @@ const Header = () => {
       <Link to="/">
         <Logo />
       </Link>
-      <Flex alignItems="center" justifyContent="end">
+      <Flex alignItems="center" justifyContent="flex-end">
         <a href="https://wa.me/972532481519">
           <IconButton
             variant="ghost"
