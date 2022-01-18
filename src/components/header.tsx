@@ -1,8 +1,10 @@
 import * as React from 'react'
 import Logo from './logo'
-import { Box, Button, Flex, List, ListItem } from '@chakra-ui/react'
+import { Box, Button, Flex, List, ListItem, IconButton } from '@chakra-ui/react'
 import Container from './container'
 import { BsWhatsapp } from 'react-icons/bs'
+import { HiOutlineMenuAlt3 } from 'react-icons/hi'
+
 import { Link } from 'gatsby'
 
 const Header = () => {
@@ -17,6 +19,12 @@ const Header = () => {
       mb={4}
     >
       <Box as="nav">
+        <IconButton
+          display={['block', 'block', 'none']}
+          variant="ghost"
+          aria-label="mobile menu"
+          icon={<HiOutlineMenuAlt3 size={28} />}
+        />
         <List display={['none', 'none', 'flex']}>
           <ListItem>
             <Button variant="ghost" fontWeight="400">
@@ -35,12 +43,17 @@ const Header = () => {
           </ListItem>
         </List>
       </Box>
+
       <Link to="/">
         <Logo />
       </Link>
       <Flex alignItems="center" justifyContent="end">
         <a href="https://wa.me/972532481519">
-          <BsWhatsapp color="#25D366" size={24} />
+          <IconButton
+            variant="ghost"
+            aria-label="whatsapp"
+            icon={<BsWhatsapp color="#25D366" size={24} />}
+          />
         </a>
         <Box mr={4} display={['none', 'none', 'block']}>
           054-4565454

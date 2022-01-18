@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="homepage" />
 
-      <Flex pos="relative" justifyContent="center" alignItems="center">
+      <Flex pos="relative" justifyContent="center" alignItems="center" mb={6}>
         <StaticImage
           layout="constrained"
           placeholder="dominantColor"
@@ -27,13 +27,6 @@ const BlogIndex = ({ data, location }) => {
           py={[2, 10, 10]}
           mt={['-2rem', '-12rem']}
         >
-          {/*<StaticImage*/}
-          {/*  layout="constrained"*/}
-          {/*  placeholder="blurred"*/}
-          {/*  src="../images/ayala-text.png"*/}
-          {/*  width={100}*/}
-          {/*  alt="איילה השכרת ציוד "*/}
-          {/*/>*/}
           <Box
             as="h1"
             fontSize={['1rem', '3rem', '3rem']}
@@ -44,6 +37,13 @@ const BlogIndex = ({ data, location }) => {
           </Box>
         </Box>
       </Flex>
+      <Box>
+        לורם איפסום הוא טקסט פשוט ו"חי" (כלומר שממש כתוב בטקסט ואינו תמונה),
+        ומשמש כתחליף לטקסט באתר. כל מטרתו של הטקסט הזה הוא לשמש כדוגמא לאיך טקסט
+        חי- כזה שמורכב מאותיות ומילים באורכים רנדומלים (כמו שטקסט אמיתי נראה),
+        יראה באתר שלנו. הטקסט הזה פשוט כתוב בצורה "טבעית" שתופסת מקום וצורה של
+        טקסט אמיתי, בשונה מטקסט שמועתק ומודבק בהכפלה ונראה ככה-
+      </Box>
     </Layout>
   )
 }
