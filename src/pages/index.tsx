@@ -3,7 +3,9 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex, Heading } from '@chakra-ui/react'
+import { Strip } from '../components/home/strip'
+import { EquipmentBoxes } from '../components/home/equipment-boxes'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -11,8 +13,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="homepage" />
-
-      <Flex pos="relative" justifyContent="center" alignItems="center" mb={6}>
+      <Flex pos="relative" justifyContent="center" alignItems="center" mb={10}>
         <StaticImage
           layout="constrained"
           placeholder="dominantColor"
@@ -37,13 +38,18 @@ const BlogIndex = ({ data, location }) => {
           </Box>
         </Box>
       </Flex>
-      <Box>
+      <Strip />
+      <Box mb={10}>
         לורם איפסום הוא טקסט פשוט ו"חי" (כלומר שממש כתוב בטקסט ואינו תמונה),
         ומשמש כתחליף לטקסט באתר. כל מטרתו של הטקסט הזה הוא לשמש כדוגמא לאיך טקסט
         חי- כזה שמורכב מאותיות ומילים באורכים רנדומלים (כמו שטקסט אמיתי נראה),
         יראה באתר שלנו. הטקסט הזה פשוט כתוב בצורה "טבעית" שתופסת מקום וצורה של
         טקסט אמיתי, בשונה מטקסט שמועתק ומודבק בהכפלה ונראה ככה-
       </Box>
+      <Heading textAlign="center" mb={10}>
+        מבחר ענק של ציוד
+      </Heading>
+      <EquipmentBoxes />
     </Layout>
   )
 }
